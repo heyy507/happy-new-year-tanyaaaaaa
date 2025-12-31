@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy New Year Tanya ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    color:#fff;
+    text-align:center;
+}
+.lock{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.lock-box{
+    background:rgba(255,255,255,.15);
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+.lock-box input{
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    margin-top:10px;
+    width:100%;
+}
+.lock-box button{
+    margin-top:15px;
+    padding:12px;
+    border:none;
+    border-radius:20px;
+    background:#fff;
+    color:#ff4f7b;
+    cursor:pointer;
+    width:100%;
+}
+.container{display:none;padding:30px}
+h1{font-size:2.8em}
+.heart{font-size:60px;animation:beat 1.2s infinite}
+@keyframes beat{50%{transform:scale(1.2)}}
+.card{
+    background:rgba(255,255,255,.15);
+    padding:25px;
+    border-radius:20px;
+    margin:30px 0;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+.photos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:15px;
+}
+.photos img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+button{
+    padding:14px 25px;
+    border:none;
+    border-radius:25px;
+    background:#fff;
+    color:#ff4f7b;
+    cursor:pointer;
+}
+#surprise{display:none;margin-top:15px}
+footer{opacity:.8;margin-top:40px}
+</style>
+</head>
+
+<body>
+
+<div class="lock" id="lock">
+  <div class="lock-box">
+    <h2>🔐 For Tanya Only</h2>
+    <input type="password" id="pass" placeholder="Enter password">
+    <button onclick="unlock()">Unlock 💖</button>
+    <p id="error"></p>
+  </div>
+</div>
+
+<div class="container" id="site">
+
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_45f16f7f5a.mp3" type="audio/mpeg">
+</audio>
+
+<h1>🎆 Happy New Year 2026 🎆</h1>
+<h2>My Love, <b>Tanya</b> 💕</h2>
+<div class="heart">❤️</div>
+
+<div class="card">
+<p>
+Dear Tanya,<br><br>
+Every year becomes special because of you.
+Thank you for loving me, supporting me, and choosing me.
+I promise to stand by you through everything.
+<br><br>
+This year, next year, and always — it’s you.
+</p>
+<p><b>I love you forever 🤍</b></p>
+</div>
+
+<div class="card">
+<h3>📸 Our Memories</h3>
+<div class="photos">
+  <img src="photo1.jpg">
+  <img src="photo2.jpg">
+  <img src="photo3.jpg">
+  <img src="photo4.jpg">
+</div>
+</div>
+
+<div class="card">
+<h3>🎁 A Surprise</h3>
+<button onclick="showSurprise()">Tap Me 💝</button>
+<div id="surprise">
+<p>
+No matter what life brings,<br>
+I choose you — always.<br><br>
+<b>Forever yours, Tanya ✨</b>
+</p>
+</div>
+</div>
+
+<footer>
+With endless love,<br>
+<b>— Mehfil ❤️</b>
+</footer>
+
+</div>
+
+<script>
+function unlock(){
+  if(document.getElementById("pass").value==="tanyaforever"){
+    document.getElementById("lock").style.display="none";
+    document.getElementById("site").style.display="block";
+  } else {
+    document.getElementById("error").innerText="Wrong password 😅";
+  }
+}
+function showSurprise(){
+  document.getElementById("surprise").style.display="block";
+}
+</script>
+
+</body>
+</html>
