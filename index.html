@@ -111,11 +111,22 @@ This year, next year, and always — it’s you.
 </div>
 <p id="surprise" style="margin-top:20px; font-size:1.2rem;"></p>
 
-<audio id="voiceMessage">
+<audio id="voiceMessage" preload="auto">
     <source src="voice.m4a" type="audio/mp4">
 </audio>
 
+<button onclick="playVoice()">🎤 Play My Voice Message</button>
+
 <script>
+function playVoice() {
+    const audio = document.getElementById("voiceMessage");
+    audio.play().catch(err => {
+        alert("Tap again to play ❤️");
+        console.log(err);
+    });
+}
+</script>
+
 function showMessage() {
     document.getElementById("surprise").innerHTML =
     "I love you so much, Tanya ❤️ Thank you for taking care of me like your little baby. Let’s make this year unforgettable together 🥰✨";
