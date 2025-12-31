@@ -109,6 +109,23 @@ This year, next year, and always — it’s you.
 </p>
 <p><b>I love you forever 🤍</b></p>
 </div>
+<p id="surprise" style="margin-top:20px; font-size:1.2rem;"></p>
+
+<audio id="voiceMessage">
+    <source src="voice.m4a" type="audio/mp4">
+</audio>
+
+<script>
+function showMessage() {
+    document.getElementById("surprise").innerHTML =
+    "I love you so much, Tanya ❤️ Thank you for taking care of me like your little baby. Let’s make this year unforgettable together 🥰✨";
+}
+
+function playVoice() {
+    document.getElementById("voiceMessage").play();
+}
+</script>
+
 
 <div class="card">
 <h3>📸 Our Memories</h3>
@@ -119,6 +136,12 @@ This year, next year, and always — it’s you.
   <img src=“photo4.jpg” alt=“Memory 4”>
 </div>
 </div>
+<h2>🎧 A message from my heart</h2>
+
+<audio controls>
+  <source src=“tanya-voice.m4a” type=“audio/mp4”>
+  Your browser does not support the audio element.
+</audio>
 
 <div class="card">
 <h3>🎁 A Surprise</h3>
